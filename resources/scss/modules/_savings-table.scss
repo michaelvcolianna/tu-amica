@@ -1,0 +1,277 @@
+.savings-table
+{
+    background: $color-amica-ghost;
+    padding: 12px 0 8px 0;
+
+    @include bp($screen-sm)
+    {
+        padding: 52px 0;
+    }
+
+    table,
+    p
+    {
+        margin: auto;
+        padding-left: 23px;
+        width: 303px;
+    }
+
+    table
+    {
+        border-spacing: 0;
+
+        @include bp($screen-sm)
+        {
+            @include flexbox;
+            @include flex-flow( row );
+            @include justify-content( flex-start );
+            padding-left: 0;
+            width: 543px;
+        }
+
+        @include bp($screen-lg)
+        {
+            width: 980px;
+        }
+
+        thead
+        {
+            @include bp($screen-sm)
+            {
+                width: 133px;
+            }
+
+            @include bp($screen-lg)
+            {
+                width: 185px;
+
+                #page-home &
+                {
+                    width: 200px;
+                }
+            }
+
+            tr
+            {
+                @include bp($screen-sm)
+                {
+                    width: 140px;
+                }
+
+                @include bp($screen-lg)
+                {
+                    display: block;
+                    width: 185px;
+
+                    #page-home &
+                    {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+
+        th,
+        td
+        {
+            width: 50%;
+
+            @include bp($screen-sm)
+            {
+                width: auto;
+            }
+        }
+
+        th
+        {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1;
+
+            @include bp($screen-sm)
+            {
+                display: block;
+                font-size: 13px;
+            }
+
+            &.tcol-1
+            {
+                padding: 27px 23px 27px 12px;
+
+                @include bp($screen-sm)
+                {
+                    box-shadow: 1px 0 0 #fff;
+                    padding: 12px 19px;
+                }
+
+                @include bp($screen-lg)
+                {
+                    font-size: 16px;
+                }
+            }
+
+            &.tcol-2
+            {
+                padding: 27px 0 27px 15px;
+
+                @include bp($screen-sm)
+                {
+                    padding: 12px 19px;
+                }
+
+                @include bp($screen-lg)
+                {
+                    font-size: 16px;
+
+                    #page-home &
+                    {
+                        padding-left: 35px;
+                    }
+                }
+            }
+
+            sup
+            {
+                @include bp($screen-sm)
+                {
+                    top: auto;
+                }
+            }
+        }
+
+        tbody
+        {
+            @include bp($screen-sm)
+            {
+                @include flexbox;
+                @include flex-flow( row );
+                @include justify-content( flex-end );
+                width: 405px;
+            }
+
+            @include bp($screen-lg)
+            {
+                width: 795px;
+
+                #page-home &
+                {
+                    width: 780px;
+                }
+            }
+
+            tr
+            {
+                @include bp($screen-sm)
+                {
+                }
+
+                @include bp($screen-lg)
+                {
+                    display: block;
+                    width: 160px;
+
+                    #page-home &
+                    {
+                        width: 195px;
+                    }
+                }
+            }
+        }
+
+        td
+        {
+            font-weight: 700;
+            @include bold-fix;
+
+            @include bp($screen-sm)
+            {
+                display:  block;
+            }
+
+            @include bp($screen-lg)
+            {
+                width: 160px;
+
+                #page-home &
+                {
+                    width: 195px;
+                }
+            }
+
+            &.tcol-1
+            {
+                font-size: 16px;
+                padding: 0 25px 16px 24px;
+
+                @include bp($screen-sm)
+                {
+                    font-size: 13px;
+                    padding: 11px 13px;
+
+                    #page-home &
+                    {
+                        padding: 11px 20px;
+                    }
+                }
+
+                @include bp($screen-lg)
+                {
+                    font-size: 16px;
+                    padding: 11px 0;
+                    text-align: center;
+                }
+            }
+
+            &.tcol-2
+            {
+                color: $color-amica-teal;
+                font-size: 19px;
+                padding: 0 39px 18px 16px;
+
+                @include bp($screen-sm)
+                {
+                    font-size: 16px;
+                    padding: 14px 0;
+                    text-align: center;
+                }
+
+                @include bp($screen-lg)
+                {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .tcol-1
+        {
+            background: #fff;
+            text-align: right;
+        }
+
+        .tcol-2
+        {
+            text-align: right;
+        }
+    }
+
+    p
+    {
+        font-size: 12px;
+        font-weight: 200;
+        line-height: 16px;
+        padding-top: 14px;
+
+        @include bp($screen-sm)
+        {
+            font-size: 13px;
+            line-height: 18px;
+            padding: 20px 0 0 0;
+            width: 524px;
+        }
+
+        @include bp($screen-lg)
+        {
+            width: 980px;
+        }
+    }
+}

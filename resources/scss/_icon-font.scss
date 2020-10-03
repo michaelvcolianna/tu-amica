@@ -1,0 +1,109 @@
+// icon-font.scss
+// Styles specific to custom icon fonts (think: icomoon, fontello…)
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: '#{$icomoon-font-family}' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon-check-circle {
+    &:before {
+      content: $icon-check-circle;
+    }
+  }
+  .icon-airplane {
+    &:before {
+      content: $icon-airplane;
+    }
+  }
+  .icon-apartment {
+    &:before {
+      content: $icon-apartment;
+    }
+  }
+  .icon-bicycle {
+    &:before {
+      content: $icon-bicycle;
+    }
+  }
+  .icon-briefcase {
+    &:before {
+      content: $icon-briefcase;
+    }
+  }
+  .icon-building {
+    &:before {
+      content: $icon-building;
+    }
+  }
+  .icon-car {
+    &:before {
+      content: $icon-car;
+    }
+  }
+  .icon-caret {
+    &:before {
+      content: $icon-caret;
+    }
+  }
+  .icon-family {
+    &:before {
+      content: $icon-family;
+    }
+  }
+  .icon-house {
+    &:before {
+      content: $icon-house;
+    }
+  }
+  .icon-phone {
+    &:before {
+      content: $icon-phone;
+    }
+  }
+  .icon-stars-five {
+    &:before {
+      content: $icon-stars-five;
+    }
+  }
+  .icon-stars-four-and-a-half {
+    &:before {
+      content: $icon-stars-four-and-a-half;
+    }
+  }
+  .icon-facebook2 {
+    &:before {
+      content: $icon-facebook2;
+    }
+  }
+  .icon-instagram {
+    &:before {
+      content: $icon-instagram;
+    }
+  }
+  .icon-twitter {
+    &:before {
+      content: $icon-twitter;
+    }
+  }
+  .icon-youtube {
+    &:before {
+      content: $icon-youtube;
+    }
+  }
+  .icon-linkedin {
+    &:before {
+      content: $icon-linkedin;
+    }
+  }
+

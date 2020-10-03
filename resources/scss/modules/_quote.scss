@@ -1,0 +1,675 @@
+// BEGIN design quirks
+#page-quote
+{
+    @include bp($screen-sm)
+    {
+        padding-bottom: 0;
+    }
+
+    .mantle
+    {
+        @include bp($screen-lg)
+        {
+            height: 597px;
+        }
+    }
+
+    main
+    {
+        @include flexbox;
+        @include flex-flow( column );
+        @include justify-content( flex-start );
+    }
+
+    // easier to read order this way instead of defining outside and bp()'ing
+    @include bp($screen-sm)
+    {
+        .mantle
+        {
+            order: 1;
+        }
+
+        #quote-copy
+        {
+            order: 3;
+        }
+
+        #quote-cta-top
+        {
+            order: 2;
+        }
+
+        #quote-form,
+        #quote-completed,
+        #quote-error
+        {
+            order: 4;
+        }
+
+        #quote-cta-bottom
+        {
+            order: 5;
+        }
+    }
+}
+// END design quirks
+
+#quote-copy
+{
+    @include bp($screen-sm)
+    {
+        padding-bottom: 0;
+    }
+
+    @include bp($screen-lg)
+    {
+        height: auto;
+        margin: auto;
+        position: static;
+    }
+
+    .copy-inner
+    {
+        @include bp($screen-lg)
+        {
+            padding: 54px 0 18px 0;
+            position: static;
+            width: 100%;
+        }
+
+        h1,
+        p
+        {
+            @include bp($screen-lg)
+            {
+                text-align: left;
+                width: 100%;
+            }
+        }
+
+        h1
+        {
+            @include bp($screen-lg)
+            {
+                font-weight: 900;
+                padding-bottom: 26px;
+            }
+        }
+    }
+}
+
+.cta
+{
+    &#quote-cta-top
+    {
+        @include bp($screen-sm)
+        {
+            background: transparent;
+            height: 395px;
+            margin: auto;
+            padding: 0;
+            width: 524px;
+        }
+
+        @include bp($screen-lg)
+        {
+            height: 597px;
+            margin-top: -597px;
+            width: 980px;
+        }
+
+        .cta-inner
+        {
+            @include bp($screen-sm)
+            {
+                background: $color-amica-ghost;
+                margin: 92px 0 0 0;
+                padding-bottom: 18px;
+                width: 318px;
+            }
+
+            @include bp($screen-lg)
+            {
+                @include justify-content( flex-start );
+                background: #fff;
+                margin: 177px 0 0 0;
+            }
+        }
+
+        .call-button
+        {
+            @include bp($screen-sm)
+            {
+                display: none;
+            }
+        }
+
+        h2
+        {
+            display: none;
+
+            @include bp($screen-sm)
+            {
+                display: block;
+                font-family: $font-avenir;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                margin: 0 auto;
+                padding-top: 10px;
+                width: 245px;
+                @include bold-fix;
+            }
+        }
+
+        p
+        {
+            padding-top: 8px;
+            width: 195px;
+
+            @include bp($screen-sm)
+            {
+                margin: 0 auto;
+                padding-bottom: 10px;
+                padding-top: 0;
+            }
+        }
+
+        .dropdown
+        {
+            @include bp($screen-sm)
+            {
+                margin: 0 auto;
+                width: 254px;
+            }
+
+            // >:(
+            .dropdown-menu
+            {
+                @include bp($screen-sm)
+                {
+                    width: 254px;
+                }
+            }
+
+            p
+            {
+                @include bp($screen-sm)
+                {
+                    padding-bottom: 0;
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+
+    &#quote-cta-bottom
+    {
+        .cta-inner
+        {
+            @include bp($screen-lg)
+            {
+                @include justify-content( flex-start );
+            }
+        }
+
+        .call-button
+        {
+            @include bp($screen-sm)
+            {
+                margin-top: 24px;
+            }
+
+            @include bp($screen-lg)
+            {
+                margin: 24px auto 0 auto;
+            }
+        }
+
+        p
+        {
+            padding-bottom: 8px;
+
+            @include bp($screen-sm)
+            {
+                padding-bottom: 0;
+            }
+
+            & > strong:first-child
+            {
+                display: block;
+                font-weight: 700;
+
+                // wow
+                @media (max-width: $screen-sm)
+                {
+                    @include bold-fix;
+                }
+
+                @include bp($screen-sm)
+                {
+                    display: inline;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .dropdown
+        {
+            @include bp($screen-lg)
+            {
+                display: none;
+            }
+        }
+
+        aside
+        {
+            font-size: 16px;
+            margin-top: 20px;
+            text-align: center;
+
+            @include bp($screen-lg)
+            {
+                display: none;
+            }
+        }
+    }
+}
+
+#quote-form
+{
+    margin: auto;
+    max-height: 1000vh;
+    overflow: hidden;
+    transition: max-height 150ms $base-transition-easing;
+    width: 320px;
+
+    .form-submitted &,
+    .form-error &
+    {
+        max-height: 0;
+        transition: max-height 300ms $base-transition-easing;
+    }
+
+    @include bp($screen-sm)
+    {
+        width: 524px;
+    }
+
+    @include bp($screen-lg)
+    {
+        width: 980px;
+    }
+
+    h2
+    {
+        font-size: 22px;
+        font-weight: 900;
+        margin: 0;
+        padding-bottom: 4px;
+        padding-top: 13px;
+        @include bold-fix;
+
+        @include bp($screen-sm)
+        {
+            padding-top: 6px;
+        }
+
+        @include bp($screen-lg)
+        {
+            color: $color-amica-teal;
+            font-size: 24px;
+            font-weight: 600;
+            padding-bottom: 24px;
+            padding-top: 0;
+        }
+    }
+
+    p
+    {
+        font-size: 16px;
+        line-height: 22px;
+        margin: 0;
+    }
+
+    .form-error
+    {
+        color: $color-warning;
+        font-size: 14px;
+        margin-top: 16px;
+
+        @include bp($screen-sm)
+        {
+            font-size: 16px;
+        }
+
+        @include bp($screen-lg)
+        {
+            margin-top: 32px;
+        }
+    }
+
+    form
+    {
+        padding-bottom: 13px;
+
+        @include bp($screen-sm)
+        {
+            padding-bottom: 52px;
+        }
+
+        @include bp($screen-lg)
+        {
+            margin: auto;
+            padding-bottom: 75px;
+            width: 800px;
+        }
+    }
+
+    .form-field
+    {
+        margin-top: 16px;
+        position: relative;
+
+        @include bp($screen-sm)
+        {
+            font-size: 16px;
+        }
+
+        @include bp($screen-lg)
+        {
+            margin-top: 38px;
+        }
+
+        &.invalid
+        {
+            label
+            {
+                color: $color-warning;
+
+                &:after
+                {
+                    content: '*';
+                }
+            }
+        }
+
+        &.firstname,
+        &.lastname
+        {
+            @include bp($screen-lg)
+            {
+                width: 335px;
+            }
+        }
+
+        &.firstname
+        {
+            @include bp($screen-lg)
+            {
+                float: left;
+            }
+        }
+
+        &.lastname
+        {
+            @include bp($screen-lg)
+            {
+                float: right;
+            }
+        }
+
+        &.phone
+        {
+            @include bp($screen-lg)
+            {
+                clear: both;
+                padding-top: 38px;
+            }
+        }
+
+        span
+        {
+            display: none;
+        }
+    }
+
+    .form-row
+    {
+        @include flexbox;
+        @include flex-flow( row wrap );
+        @include justify-content( space-between );
+
+        .form-field
+        {
+            width: 50%;
+        }
+
+        .early,
+        .late
+        {
+            .select
+            {
+                @include bp($screen-sm)
+                {
+                    width: 215px;
+                }
+
+                @include bp($screen-lg)
+                {
+                    width: 335px;
+                }
+
+                select
+                {
+                    @include bp($screen-sm)
+                    {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .early
+        {
+            label
+            {
+                white-space: nowrap;
+
+                @include bp($screen-sm)
+                {
+                    display: block;
+                }
+            }
+
+            .select
+            {
+                margin-top: 4px;
+            }
+        }
+
+        .late
+        {
+            label
+            {
+                left: -12px;
+                position: relative;
+                top: 34px;
+
+                @include bp($screen-sm)
+                {
+                    left: -16px;
+                }
+            }
+
+            .select
+            {
+                float: right;
+                top: 23px;
+            }
+        }
+    }
+
+    input,
+    button,
+    select
+    {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        border: 0;
+        display: block;
+        font-family: $font-avenir;
+    }
+
+    input,
+    select
+    {
+        font-size: 18px;
+        font-weight: 400;
+        margin: 4px 0 0 0;
+        padding: 4px 8px;
+    }
+
+    input
+    {
+        background: $color-amica-ghost;
+        border-radius: 0;
+        height: 34px;
+        width: 100%;
+    }
+
+    .select
+    {
+        display: inline-block;
+        position: relative;
+
+        &:before,
+        &:after
+        {
+            position: absolute;
+        }
+
+        &:before
+        {
+            bottom: 0;
+            content: '';
+            background: $color-amica-ghost;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: -1;
+        }
+
+        &:after
+        {
+            content: '\e906';
+            font-family: $icomoon-font-family;
+            right: 6px;
+            top: 12px;
+            z-index: -1;
+        }
+    }
+
+    select
+    {
+        background: transparent;
+        border-radius: 0;
+        position: relative;
+        width: 110px;
+
+        @include bp($screen-sm)
+        {
+            width: 100%;
+        }
+    }
+
+    .timezone,
+    .coverage
+    {
+        .select,
+        select
+        {
+            width: 100%;
+        }
+    }
+
+    button
+    {
+        background: $color-amica-orange;
+        border: 1px solid $color-amica-orange;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 22px;
+        font-weight: 500;
+        height: 60px;
+        margin: 24px auto 0 auto;
+        width: 200px;
+
+        @include bp($screen-lg)
+        {
+            cursor: pointer;
+            margin-top: 75px;
+            transition: all $base-transition-duration $base-transition-easing;
+
+            &:hover
+            {
+                background: #fff;
+                border-color: $color-amica-orange;
+                color: $color-amica-orange;
+            }
+        }
+    }
+}
+
+.form-message
+{
+    margin: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 300ms $base-transition-easing;
+    width: 320px;
+
+    .form-submitted &#quote-completed,
+    .form-error &#quote-error
+    {
+        max-height: 1000vh;
+    }
+
+    @include bp($screen-sm)
+    {
+        width: 525px;
+    }
+
+    h2
+    {
+        padding-top: 32px;
+        @include bold-fix;
+
+        @include bp($screen-sm)
+        {
+            font-size: 24px;
+        }
+
+        @include bp($screen-lg)
+        {
+            padding-top: 75px;
+        }
+    }
+
+    p
+    {
+        padding-bottom: 32px;
+
+        @include bp($screen-sm)
+        {
+            font-size: 16px;
+            padding-bottom: 56px;
+        }
+
+        @include bp($screen-lg)
+        {
+            padding-bottom: 95px;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "theme": {
+        "path": "./"
+    },
+    "source": {
+        "path": "resources/",
+        "images": {
+            "path": "images/"
+        },
+        "fonts": {
+            "path": "fonts/"
+        },
+        "sass": {
+            "path": "scss/"
+        },
+        "scripts": {
+            "path": "scripts/",
+            "build": {
+                "entry": "index.js",
+                "path": "/"
+            }
+        }
+    },
+    "asset": {
+        "path": "public/assets/",
+        "styles": {
+            "path": null
+        },
+        "fonts": {
+            "path": "fonts"
+        },
+        "images": {
+            "path": "images"
+        }
+    },
+    "reference": "amica-tuamica"
+}

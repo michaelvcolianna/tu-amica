@@ -1,0 +1,563 @@
+// site header
+header
+{
+    @include align-items( center );
+    @include flexbox;
+    @include flex-flow( row wrap );
+    @include justify-content( space-between );
+    height: 48px;
+    margin: auto;
+    max-width: 375px;
+
+    @include bp($screen-sm)
+    {
+        @include align-items( flex-start );
+        @include justify-content( flex-start );
+        height: 145px;
+        max-width: $screen-sm;
+    }
+
+    @include bp($screen-lg)
+    {
+        max-width: 980px;
+        position: relative;
+    }
+
+    #menu-toggle
+    {
+        margin: 0 0 0 31px;
+
+        @include bp($screen-sm)
+        {
+            margin: 73px 0 0 122px;
+        }
+
+        @include bp($screen-lg)
+        {
+            display: none;
+        }
+    }
+
+    button
+    {
+        background-color: transparent;
+        border: 0;
+        color: inherit;
+        cursor: pointer;
+        display: inline-block;
+        font: inherit;
+        margin: 0;
+        overflow: visible;
+        padding: 0;
+        text-transform: none;
+        transition-duration: 0.15s;
+        transition-property: opacity, filter;
+        transition-timing-function: linear;
+
+        &:hover
+        {
+            opacity: 0.7;
+        }
+
+        & > span
+        {
+            display: inline-block;
+            height: 15px;
+            position: relative;
+            width: 22px;
+        }
+
+        span span,
+        span span:before,
+        span span:after
+        {
+            background-color: #000;
+            border-radius: 4px;
+            height: 3px;
+            position: absolute;
+            transition-duration: 0.15s;
+            transition-property: transform;
+            transition-timing-function: ease;
+            width: 22px;
+        }
+
+        span span
+        {
+            cursor: pointer;
+            display: block;
+            top: 50%;
+            transition-duration: 0.075s;
+            transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+            &:before,
+            &:after
+            {
+                content: '';
+                display: block;
+            }
+
+            &:before
+            {
+                top: -7px;
+                transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+            }
+
+            &:after
+            {
+                bottom: -7px;
+                transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            }
+        }
+
+        .menu-open &
+        {
+            &:hover
+            {
+                opacity: 0.7;
+            }
+
+            & span span,
+            & span span:before,
+            & span span:after
+            {
+                background-color: #000;
+            }
+
+            & span span
+            {
+                transform: rotate(45deg);
+                transition-delay: 0.12s;
+                transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+                &:before
+                {
+                    opacity: 0;
+                    top: 0;
+                    transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+                }
+
+                &:after
+                {
+                    bottom: 0;
+                    transform: rotate(-90deg);
+                    transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+                }
+            }
+        }
+
+        em
+        {
+            display: none;
+        }
+    }
+
+    #logo
+    {
+        margin:0;
+
+        @include bp($screen-sm)
+        {
+            margin: 59px 0 0 100px;
+        }
+
+        @include bp($screen-lg)
+        {
+            margin: 60px 0 0 0;
+        }
+
+        svg
+        {
+            height: 37px;
+            width: 90px;
+
+            @include bp($screen-sm)
+            {
+                height: 58px;
+                width: 140px;
+            }
+
+            .box
+            {
+                fill: #000;
+            }
+
+            .outer,
+            .amica,
+            .lower
+            {
+                fill: #fff;
+            }
+
+            .inner
+            {
+                fill: $color-logo-teal;
+            }
+        }
+    }
+
+    nav,
+    #call-button
+    {
+        margin: auto;
+        width: 235px;
+
+        @include bp($screen-sm)
+        {
+            width: 520px;
+        }
+
+        @include bp($screen-lg)
+        {
+            width: auto;
+        }
+    }
+
+    #header-menu
+    {
+        background: #fff;
+        bottom: 0;
+        left: 0;
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 48px;
+        transition: max-height $base-transition-duration $base-transition-easing;
+        z-index: 2;
+
+        @include bp($screen-sm)
+        {
+            top: 145px;
+        }
+
+        @include bp($screen-lg)
+        {
+            max-height: 1000vh;
+            position: static;
+        }
+
+        .menu-open &
+        {
+            max-height: 1000vh;
+        }
+
+        .language
+        {
+            margin: 40px 0 25px 0;
+
+            @include yudodis
+            {
+                margin: 15px 0;
+                width: 100%;
+            }
+
+            @include bp($screen-sm)
+            {
+                display: none;
+            }
+
+            a
+            {
+                border: 1px solid $color-amica-teal;
+                box-sizing: content-box;
+                color: $color-amica-teal;
+                display: block;
+                font-family: $font-avenir;
+                font-size: 10px;
+                font-weight: 700;
+                margin: auto;
+                padding: 10px 0;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                width: 130px;
+                @include bold-fix;
+            }
+        }
+
+        .nav-link a
+        {
+            color: $color-amica-black;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 200;
+            height: 40px;
+            line-height: 40px;
+            text-decoration: none;
+
+            @include bp($screen-lg)
+            {
+                font-size: 16px;
+                height: auto;
+                line-height: normal;
+                margin-right: 30px;
+                position: relative;
+
+                &:before
+                {
+                    background-color: #000;
+                    bottom: 0;
+                    content: '';
+                    height: 2px;
+                    left: 0;
+                    position: absolute;
+                    transition: all $base-transition-duration $base-transition-easing 0s;
+                    transform: scaleX(0);
+                    visibility: hidden;
+                    width: 100%;
+                }
+
+                &:hover:before
+                {
+                    transform: scaleX(1);
+                    visibility: visible;
+                }
+            }
+
+            &.current
+            {
+                @include bp($screen-lg)
+                {
+                    font-weight: 700;
+                    @include bold-fix;
+                }
+            }
+        }
+    }
+
+    nav
+    {
+        &.nav
+        {
+            @include yudodis
+            {
+                width: 100%;
+            }
+        }
+    }
+
+    ul
+    {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        @include yudodis
+        {
+            @include flexbox;
+            @include flex-flow( row wrap );
+            @include justify-content( space-around );
+        }
+
+        @include bp($screen-lg)
+        {
+            @include flexbox;
+            @include flex-flow( row );
+            @include justify-content( space-between );
+            margin: 73px 0 0 20px;
+        }
+    }
+
+    #call-button
+    {
+        margin-top: 30px;
+        padding-top: 30px;
+        position: relative;
+
+        @include yudodis
+        {
+            margin-top: 20px;
+            padding-top: 25px;
+        }
+
+        @include bp($screen-sm)
+        {
+            margin-top: 0;
+            padding-top: 20px;
+        }
+
+        @include bp($screen-lg)
+        {
+            display: none;
+        }
+
+        a
+        {
+            @include align-items( center );
+            @include flexbox;
+            @include flex-flow( row wrap );
+            @include justify-content( space-around );
+            background: $color-amica-orange;
+            border-radius: 3px;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+            color: #fff;
+            height: 66px;
+            text-decoration: none;
+            width: 254px;
+
+            @include bp($screen-sm)
+            {
+                margin-left: 127px;
+            }
+        }
+
+        i
+        {
+            font-size: 24px;
+        }
+
+        em
+        {
+            color: $color-amica-orange;
+            font-family: $font-avenir;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            left: 0;
+            position: absolute;
+            text-transform: uppercase;
+            top: 0;
+            @include bold-fix;
+
+            @include bp($screen-sm)
+            {
+                top: auto;
+            }
+        }
+
+        strong
+        {
+            font-size: 22px;
+            font-weight: 500;
+            margin-right: 15px;
+        }
+    }
+
+    #header-call,
+    #header-language
+    {
+        @include bp($screen-lg)
+        {
+            position: absolute;
+        }
+    }
+
+    #header-call
+    {
+        margin: 0 13px 0 0;
+        width: 36px;
+
+        @include bp($screen-sm)
+        {
+            height: 40px;
+            margin: 61px 0 0 50px;
+            width: 105px;
+        }
+
+        @include bp($screen-lg)
+        {
+            margin: 63px 0 0 0;
+            right: 115px;
+        }
+
+        a
+        {
+            background: $color-amica-orange;
+            border-radius: 3px;
+            color: #fff;
+            display: block;
+            font-size: 18px;
+            height: 32px;
+            line-height: 34px;
+            text-align: center;
+            text-decoration: none;
+
+            @include bp($screen-sm)
+            {
+                background: none;
+                border-radius: 0;
+                color: $color-amica-orange;
+                height: auto;
+                line-height: normal;
+                text-align: right;
+            }
+        }
+
+        .icon-phone
+        {
+            @include bp($screen-sm)
+            {
+                display: none;
+            }
+        }
+
+        em,
+        strong
+        {
+            display: none;
+
+            @include bp($screen-sm)
+            {
+                display: block;
+            }
+        }
+
+        em
+        {
+            font-size: 15px;
+            font-style: normal;
+            text-transform: uppercase;
+        }
+
+        strong
+        {
+            font-size: 16px;
+            font-weight: 900;
+            @include bold-fix;
+        }
+    }
+
+    #header-language
+    {
+        display: none;
+
+        @include bp($screen-sm)
+        {
+            display: block;
+            height: 44px;
+            margin: 59px 0 0 12px;
+            width: 95px;
+        }
+
+        @include bp($screen-lg)
+        {
+            margin: 59px 0 0 0;
+            right: 0;
+        }
+
+        a
+        {
+            border: 1px solid $color-amica-teal;
+            color: $color-amica-teal;
+            display: block;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 9px 5px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            @include bold-fix;
+
+            @include bp($screen-lg)
+            {
+                transition: all $base-transition-duration $base-transition-easing;
+
+                &:hover
+                {
+                    background: $color-amica-teal;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

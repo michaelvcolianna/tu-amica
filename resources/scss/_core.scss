@@ -1,0 +1,11 @@
+// core.scss
+// Controls SCSS partial/dependency order for core functionality
+
+// vars and setup
+@import 'colors';
+@import 'variables';
+@import 'mixins';
+
+// basics
+@import 'icon-font';
+@import 'typography';

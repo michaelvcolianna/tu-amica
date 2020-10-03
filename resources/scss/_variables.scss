@@ -1,0 +1,62 @@
+// variables.scss
+// Any/all site-wide variables (so that dependency order can be controlled in styles.scss)
+
+$screen-xs: 480px !default;
+$screen-sm: 768px !default;
+$screen-md: 992px !default;
+$screen-lg: 1024px !default;
+$screen-xl: 1440px !default;
+
+// content max width
+$content-max-width: 1400px;
+
+// fonts
+$font-avenir: 'Avenir', sans-serif;
+$font-baskerville: 'Baskerville', serif;
+$font-merriweather: 'Amica Heading', serif; // Merriweather license requires rename
+
+$font-heading-family: $font-avenir;
+$font-body-family: $font-avenir;
+$font-color: $color-amica-black;
+$font-size: 14px;
+
+// client custom (hosted) fonts
+$typography-custom-font-url: '../fonts/';
+
+// images
+$image-path: '../images/';
+
+// links
+$link-color: #00f;
+$link-hover-color: #77f;
+
+
+// transitions
+$base-transition-duration: 195ms;
+$base-transition-easing: cubic-bezier(0.4, 0.0, 0.2, 1);
+
+// Tricksssy Unicode Entities
+$character-non-breaking-space: '\00A0';
+
+// icon font
+$icomoon-font-family: "amica-enterprise" !default;
+$icomoon-font-path: $typography-custom-font-url !default;
+
+$icon-check-circle: "\e90c";
+$icon-airplane: "\e900";
+$icon-apartment: "\e901";
+$icon-bicycle: "\e902";
+$icon-briefcase: "\e903";
+$icon-building: "\e904";
+$icon-car: "\e905";
+$icon-caret: "\e906";
+$icon-family: "\e907";
+$icon-house: "\e908";
+$icon-phone: "\e909";
+$icon-stars-five: "\e90a";
+$icon-stars-four-and-a-half: "\e90b";
+$icon-facebook2: "\ea91";
+$icon-instagram: "\ea92";
+$icon-twitter: "\ea96";
+$icon-youtube: "\ea9d";
+$icon-linkedin: "\eac9";

@@ -1,0 +1,372 @@
+#frontpage-pull
+{
+    height: 198px;
+
+    @include bp($screen-sm)
+    {
+        background: transparent;
+        border-radius: 0;
+        box-shadow: none;
+        height: 395px;
+        margin: auto;
+        position: relative;
+    }
+
+    @include bp($screen-lg)
+    {
+        height: 597px;
+    }
+
+    .pull-inner
+    {
+        @include bp($screen-sm)
+        {
+            background: #fff;
+            height: 236px;
+            position: absolute;
+            top: 74px;
+            width: 353px;
+        }
+
+        @include bp($screen-lg)
+        {
+            top: 181px;
+        }
+    }
+
+    h1,
+    p
+    {
+        margin: 0;
+    }
+
+    h1
+    {
+        color: $color-amica-black;
+        font-size: 22px;
+        font-weight: 700;
+        padding: 16px 0 4px 0;
+        @include bold-fix;
+
+        @include bp($screen-sm)
+        {
+            color: $color-amica-black;
+            font-size: 24px;
+            padding: 19px 0 2px 0;
+        }
+    }
+
+    p
+    {
+        font-size: 16px;
+    }
+
+    .dropdown
+    {
+        margin-top: 0;
+        width: 297px;
+
+        button
+        {
+            display: none;
+        }
+
+        .dropdown-menu
+        {
+            background: transparent;
+            box-shadow: none;
+            max-height: 1000vh;
+            width: 100%;
+        }
+
+        [aria-hidden="true"]
+        {
+            display: none;
+        }
+
+        ul
+        {
+            padding: 10px 0 0 0;
+
+            @include bp($screen-sm)
+            {
+                padding: 33px 0 0 0;
+            }
+        }
+
+        li
+        {
+            background: #fff;
+            border: 1px solid $color-amica-bone;
+            border-radius: 3px;
+            transition: all $base-transition-duration $base-transition-easing;
+            width: 88px;
+
+            &:hover
+            {
+                border-color: $color-amica-teal;
+            }
+        }
+
+        .dropdown-item
+        {
+            font-size: 16px;
+            font-weight: 700;
+            padding: 6px 0 14px;
+            text-transform: uppercase;
+            @include bold-fix;
+            transition: all $base-transition-duration $base-transition-easing;
+
+            &:hover
+            {
+                background: $color-amica-teal;
+                color: #fff;
+
+                span
+                {
+                    text-decoration: none;
+                }
+            }
+
+            // reads nicer to put these here instead of defining outside & bp()'ing
+            &.home i
+            {
+                top: -1px;
+            }
+
+            &.life i
+            {
+                font-size: 57px;
+                margin-bottom: -2px;
+            }
+
+            i
+            {
+                font-size: 55px;
+                position: relative;
+                top: 1px;
+            }
+
+            span
+            {
+                &:after
+                {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+#frontpage-copy
+{
+    margin: 22px 0 25px 0;
+
+    @include bp($screen-sm)
+    {
+        @include flexbox;
+        @include flex-flow( column );
+        @include justify-content( flex-start );
+        margin: auto;
+        padding: 52px 0 0 0;
+        width: 524px;
+    }
+
+    @include bp($screen-lg)
+    {
+        @include flex-flow( row wrap );
+        @include justify-content( center );
+        padding: 52px 0;
+        width: 824px;
+    }
+
+    .call-button,
+    .dropdown
+    {
+        @include bp($screen-lg)
+        {
+            width: 302px;
+        }
+    }
+
+    .call-button
+    {
+        margin-bottom: 15px;
+
+        @include bp($screen-sm)
+        {
+            margin-bottom: 0;
+            order: 3;
+        }
+
+        @include bp($screen-lg)
+        {
+            margin: 0 20px 0 0;
+        }
+    }
+
+    h2,
+    p
+    {
+        font-size: 16px;
+        margin: auto;
+        text-align: center;
+        width: 242px;
+
+        @include bp($screen-sm)
+        {
+            width: 100%;
+        }
+    }
+
+    h2
+    {
+        font-weight: 700;
+        padding-top: 8px;
+        @include bold-fix;
+
+        @include bp($screen-sm)
+        {
+            font-size: 24px;
+            line-height: 1;
+            padding-top: 0;
+            order: 1;
+        }
+    }
+
+    p
+    {
+        line-height: 22px;
+        padding-bottom: 22px;
+        padding-top: 8px;
+
+        @include bp($screen-sm)
+        {
+            order: 2;
+            padding-bottom: 42px;
+            padding-top: 15px;
+        }
+
+        @include bp($screen-lg)
+        {
+            padding-bottom: 44px;
+        }
+    }
+
+    .dropdown
+    {
+        @include bp($screen-sm)
+        {
+            margin: 20px auto 52px auto;
+            order: 4;
+        }
+
+        @include bp($screen-lg)
+        {
+            margin: 0 0 0 20px;
+        }
+    }
+}
+
+#photo-unit
+{
+    background: $color-amica-ghost;
+    padding: 25px 0 22px 0;
+
+    @include bp($screen-sm)
+    {
+        padding: 52px 0;
+    }
+
+    @include bp($screen-lg)
+    {
+        @include flexbox;
+        @include flex-flow( row );
+        @include justify-content( center );
+    }
+
+    #photo-unit-image,
+    #photo-unit-text
+    {
+        background: #fff;
+        margin: auto;
+        width: 292px;
+
+        @include bp($screen-sm)
+        {
+            width: 523px;
+        }
+
+        @include bp($screen-lg)
+        {
+            height: 340px;
+            margin: 0;
+        }
+    }
+
+    #photo-unit-image
+    {
+        @include bp($screen-lg)
+        {
+            width: 467px;
+        }
+    }
+
+    #photo-unit-text
+    {
+        padding: 36px 26px 36px 30px;
+
+        @include bp($screen-sm)
+        {
+            padding: 60px 0;
+        }
+
+        @include bp($screen-lg)
+        {
+            width: 452px;
+        }
+    }
+
+    h2,
+    p
+    {
+        margin: 0;
+
+        @include bp($screen-sm)
+        {
+            margin: auto;
+        }
+    }
+
+    h2
+    {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        width: 222px;
+        @include bold-fix;
+
+        @include bp($screen-sm)
+        {
+            font-size: 24px;
+            line-height: 34px;
+            width: 332px;
+        }
+    }
+
+    p
+    {
+        font-size: 14px;
+        line-height: 18px;
+        padding-top: 8px;
+        width: 235px;
+
+        @include bp($screen-sm)
+        {
+            font-size: 16px;
+            line-height: 22px;
+            padding-top: 20px;
+            width: 332px;
+        }
+    }
+}

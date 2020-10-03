@@ -1,0 +1,546 @@
+.copy
+{
+    padding: 13px 15px;
+
+    @include bp($screen-sm)
+    {
+        margin: auto;
+        padding: 52px 0;
+        width: 524px;
+    }
+
+    @include bp($screen-lg)
+    {
+        height: 597px;
+        margin: -597px auto auto auto;
+        padding: 0;
+        position: relative;
+        width: 980px;
+    }
+
+    .copy-inner
+    {
+        @include bp($screen-lg)
+        {
+            background: #fff;
+            left: 0;
+            padding: 24px 0;
+            position: absolute;
+            width: 353px;
+        }
+
+        h1
+        {
+            @include bp($screen-lg)
+            {
+                margin: auto;
+            }
+        }
+    }
+
+    // Easier to read this way
+    @include bp($screen-lg)
+    {
+        &#auto-copy .copy-inner
+        {
+            top: 215px;
+        }
+
+        &#home-copy .copy-inner
+        {
+            top: 204px;
+        }
+
+        &#life-copy .copy-inner
+        {
+            top: 217px;
+        }
+    }
+
+    h1,
+    p
+    {
+        @include bp($screen-lg)
+        {
+            text-align: center;
+            width: 289px;
+        }
+    }
+
+    h1
+    {
+        color: $color-amica-teal;
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0;
+        @include bold-fix;
+
+        @include bp($screen-lg)
+        {
+            color: $color-amica-black;
+        }
+    }
+
+    p
+    {
+        font-size: 16px;
+        line-height: 22px;
+
+        em
+        {
+            font-family: $font-merriweather;
+            line-height: normal;
+        }
+
+        @include bp($screen-lg)
+        {
+            margin: auto;
+        }
+    }
+}
+
+.cta
+{
+    background: $color-amica-ghost;
+    padding: 14px 0;
+
+    @include bp($screen-sm)
+    {
+        padding: 52px 0;
+    }
+
+    .cta-inner
+    {
+        background: #fff;
+        margin: auto;
+        padding: 16px 27px 16px 34px;
+        width: 320px;
+
+        @include bp($screen-sm)
+        {
+            @include flexbox;
+            @include flex-flow( column );
+            @include justify-content( flex-start );
+            background: transparent;
+            padding: 0;
+            width: 524px;
+        }
+
+        @include bp($screen-lg)
+        {
+            @include flex-flow( row wrap );
+            @include justify-content( center );
+            width: 824px;
+        }
+    }
+
+    .call-button,
+    .dropdown
+    {
+        @include bp($screen-lg)
+        {
+            width: 302px;
+        }
+    }
+
+    &#home-cta,
+    &#life-cta
+    {
+        .call-button,
+        .dropdown
+        {
+            @include bp($screen-lg)
+            {
+                margin-top: 32px;
+            }
+        }
+    }
+
+    .call-button
+    {
+        margin-bottom: 13px;
+        margin-top: 13px;
+
+        @include bp($screen-sm)
+        {
+            margin-bottom: 0;
+            margin-top: 24px;
+            order: 3;
+        }
+
+        @include bp($screen-lg)
+        {
+            margin: 0 20px 0 0;
+        }
+    }
+
+    h2,
+    p
+    {
+        font-size: 16px;
+        line-height: 22px;
+        margin: auto;
+        text-align: center;
+        width: 242px;
+
+        @include bp($screen-sm)
+        {
+            width: 100%;
+        }
+    }
+
+    h2
+    {
+        font-family: $font-merriweather;
+        font-style: italic;
+        font-weight: 400;
+
+        @include bp($screen-sm)
+        {
+            font-size: 23px;
+            line-height: 32px;
+            order: 1;
+        }
+    }
+
+    p
+    {
+        @include bp($screen-sm)
+        {
+            order: 2;
+        }
+    }
+
+    &#auto-cta
+    {
+        p
+        {
+            @include bp($screen-lg)
+            {
+                padding-bottom: 46px;
+            }
+        }
+    }
+
+    .dropdown
+    {
+        margin-top: 13px;
+
+        @include bp($screen-sm)
+        {
+            margin-top: 20px;
+            order: 4;
+        }
+
+        @include bp($screen-lg)
+        {
+            margin: 0 0 0 20px;
+        }
+
+        p
+        {
+            @include bp($screen-lg)
+            {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    aside
+    {
+        order: 5;
+    }
+}
+
+.example
+{
+    .example-offset
+    {
+        background: $color-amica-slate;
+        padding: 16px 17px;
+
+        @include bp($screen-sm)
+        {
+            padding: 0;
+        }
+
+        .offset-inner
+        {
+            @include bp($screen-sm)
+            {
+                margin: auto;
+                padding: 52px 0;
+                width: 524px;
+            }
+
+            @include bp($screen-lg)
+            {
+                width: 980px;
+            }
+
+            a
+            {
+                color: $color-amica-teal;
+            }
+        }
+
+        h2
+        {
+            @include bp($screen-sm)
+            {
+                padding-bottom: 0;
+            }
+        }
+
+        p
+        {
+            padding-top: 16px;
+        }
+    }
+
+    .example-inner
+    {
+        padding: 11px 15px;
+
+        @include bp($screen-sm)
+        {
+            margin: auto;
+            padding: 20px 0;
+            width: 524px;
+        }
+
+        @include bp($screen-lg)
+        {
+            width: 980px;
+        }
+    }
+
+
+    h2,
+    p
+    {
+        margin: 0;
+    }
+
+    h2
+    {
+        font-size: 22px;
+        font-weight: 900;
+        @include bold-fix;
+
+        @include bp($screen-sm)
+        {
+            font-size: 24px;
+            padding-bottom: 26px;
+        }
+    }
+
+    p
+    {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .accordion
+    {
+        background: $color-amica-slate;
+        border-bottom: 2px solid $color-amica-teal;
+        border-top: 0;
+
+        @include bp($screen-sm)
+        {
+            background: transparent;
+            border-bottom: 0;
+            padding: 0;
+        }
+
+        .accordion-inner
+        {
+            ul
+            {
+                @include bp($screen-sm)
+                {
+                    margin: auto;
+                    padding: 16px 0 22px 0;
+                    width: 524px;
+                }
+
+                @include bp($screen-lg)
+                {
+                    width: 980px;
+                }
+            }
+
+            li
+            {
+                @include bp($screen-sm)
+                {
+                    font-size: 16px;
+                    margin: 0;
+                }
+
+                @include bp($screen-lg)
+                {
+                    margin: 3px 0;
+                }
+            }
+
+            p
+            {
+                line-height: 1.5;
+                padding-left: 23px;
+                padding-top: 0;
+
+                @include bp($screen-sm)
+                {
+                    font-size: 13px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+
+    .callout
+    {
+        @include bp($screen-sm)
+        {
+             display: none;
+        }
+    }
+}
+
+// BEGIN page-specific design quirks
+#auto-savings,
+#home-coverage-options,
+#life-calculator
+{
+    .example-inner
+    {
+        @include bp($screen-sm)
+        {
+            padding: 52px 0 20px 0;
+        }
+    }
+}
+
+#auto-savings,
+#home-savings
+{
+    .accordion
+    {
+        @include bp($screen-sm)
+        {
+            padding: 20px 0 0 0;
+        }
+    }
+}
+
+#home-savings.example
+{
+    .callout
+    {
+        @include bp($screen-sm)
+        {
+            display: block;
+        }
+    }
+}
+
+#life-advantages-whole
+{
+    ul
+    {
+        padding-bottom: 10px;
+    }
+}
+// END page-specific design quirks
+
+#auto-bottom
+{
+    display: none;
+
+    @include bp($screen-sm)
+    {
+        display: block;
+    }
+}
+
+.callout
+{
+    background: $color-amica-ghost;
+    margin: 12px auto;
+    padding: 22px 0;
+    width: 320px;
+
+    @include bp($screen-sm)
+    {
+        margin: 22px 0 0 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .callout-inner
+    {
+        @include bp($screen-sm)
+        {
+            margin: auto;
+            padding: 46px 0;
+            width: 524px;
+        }
+
+        @include bp($screen-lg)
+        {
+            width: 980px;
+        }
+    }
+
+    p
+    {
+        line-height: 19px;
+        margin: auto;
+        padding-bottom: 12px;
+        text-align: center;
+        width: 297px;
+
+        @include bp($screen-sm)
+        {
+            font-size: 16px;
+            line-height: 22px;
+            padding-bottom: 20px0;
+            width: 510px;
+        }
+
+        @include bp($screen-lg)
+        {
+            width: 100%;
+        }
+    }
+}
+
+#life-disclaimers
+{
+    p
+    {
+        font-size: 12px;
+        margin: auto;
+        padding-top: 12px;
+        width: 320px;
+
+        @include bp($screen-sm)
+        {
+            font-size: 13px;
+            padding-top: 0;
+            width: 524px;
+        }
+
+        @include bp($screen-lg)
+        {
+            width: 980px;
+        }
+    }
+
+    sup
+    {
+        top: -4px;
+    }
+}

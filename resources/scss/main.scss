@@ -1,0 +1,18 @@
+// main.scss
+// Controls SCSS partial/dependency order for all the rest of the site
+
+// core style rules
+@import 'core';
+
+// "chrome"
+@import 'header';
+@import 'footer';
+
+// the main guts of the site styles
+@import 'general';
+@import 'modules/mantle';
+@import 'modules/frontpage';
+@import 'modules/about';
+@import 'modules/insurance';
+@import 'modules/quote';
+@import 'modules/savings-table';

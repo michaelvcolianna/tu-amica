@@ -1,0 +1,32 @@
+.mantle
+{
+    .desktop-mantle
+    {
+        background-position: center;
+        display: none;
+        height: 597px;
+        margin: auto;
+        max-width: 1440px;
+
+        @include bp($screen-lg)
+        {
+            display: block;
+        }
+    }
+
+    figure
+    {
+        margin: auto;
+        max-width: 375px;
+
+        @include bp($screen-sm)
+        {
+            max-width: 768px;
+        }
+
+        @include bp($screen-lg)
+        {
+            display: none;
+        }
+    }
+}

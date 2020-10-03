@@ -1,0 +1,292 @@
+body {
+  font-family: $font-body-family;
+  color: $font-color;
+  font-weight: 300;
+  font-size: $font-size;
+}
+
+// all headings
+
+.shell-main {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    font-family: $font-heading-family;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  h1,
+  h2,
+  .h1,
+  .h2 {
+    color: $color-amica-black;
+  }
+
+  // h4 gets misused a lot
+  h4,
+  .h4 {
+    font-weight: normal;
+    font-size: 1rem;
+    font-family: $font-body-family;
+  }
+
+  p {
+    margin: 0 0 1em 0;
+  }
+
+  // links
+  a {
+    color: $link-color;
+
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+
+}
+
+// lists
+ol,
+ul {}
+
+ol {}
+
+ul {}
+
+// @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=9eee9ac2-4a72-4d69-be5e-ac50ce54a71d");
+
+// 200 = AVENIR W01 35 LIGHT
+@font-face
+{
+    font-family: "Avenir";
+    src: url("#{$typography-custom-font-url}/edefe737-dc78-4aa3-ad03-3c6f908330ed.eot?#iefix");
+    src: url("#{$typography-custom-font-url}/edefe737-dc78-4aa3-ad03-3c6f908330ed.eot?#iefix") format("eot"),
+         url("#{$typography-custom-font-url}/0078f486-8e52-42c0-ad81-3c8d3d43f48e.woff2") format("woff2"),
+         url("#{$typography-custom-font-url}/908c4810-64db-4b46-bb8e-823eb41f68c0.woff") format("woff"),
+         url("#{$typography-custom-font-url}/4577388c-510f-4366-addb-8b663bcc762a.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: "Avenir";
+    src: url("#{$typography-custom-font-url}/63a166cb-be60-435c-a056-75172e43efa5.eot?#iefix");
+    src: url("#{$typography-custom-font-url}/63a166cb-be60-435c-a056-75172e43efa5.eot?#iefix") format("eot"),
+         url("#{$typography-custom-font-url}/a59168c1-917d-4de9-a244-0316c057c357.woff2") format("woff2"),
+         url("#{$typography-custom-font-url}/6dc0e7d8-9284-44e1-8f05-984a41daa3a4.woff") format("woff"),
+         url("#{$typography-custom-font-url}/2315df7a-8bc2-433d-bf0a-162fc0063de0.ttf") format("truetype");
+    font-weight: 200;
+    font-style: oblique;
+}
+
+// 300 = AVENIR W01 45 BOOK
+@font-face
+{
+    font-family: "Avenir";
+    src: url("#{$typography-custom-font-url}/710789a0-1557-48a1-8cec-03d52d663d74.eot?#iefix");
+    src: url("#{$typography-custom-font-url}/710789a0-1557-48a1-8cec-03d52d663d74.eot?#iefix") format("eot"),
+         url("#{$typography-custom-font-url}/065a6b14-b2cc-446e-9428-271c570df0d9.woff2") format("woff2"),
+         url("#{$typography-custom-font-url}/65d75eb0-2601-4da5-a9a4-9ee67a470a59.woff") format("woff"),
+         url("#{$typography-custom-font-url}/c70e90bc-3c94-41dc-bf14-caa727c76301.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: "Avenir";
+    src: url("#{$typography-custom-font-url}/d8c50fcc-bc32-4f31-8c24-b170c64e2254.eot?#iefix");
+    src: url("#{$typography-custom-font-url}/d8c50fcc-bc32-4f31-8c24-b170c64e2254.eot?#iefix") format("eot"),
+         url("#{$typography-custom-font-url}/476612d9-282d-4f76-95cd-b4dd31e7ed21.woff2") format("woff2"),
+         url("#{$typography-custom-font-url}/f1ebae2b-5296-4244-8771-5f40e60a564a.woff") format("woff"),
+         url("#{$typography-custom-font-url}/04d1bf6c-070d-4b7e-9498-6051c9f0c349.ttf") format("truetype");
+    font-weight: 300;
+    font-style: oblique;
+}
+
+// 400 = AVENIR W01 55 ROMAN
+@font-face
+{
+    font-family: "Avenir";
+    src: url("#{$typography-custom-font-url}/57bf7902-79ee-4b31-a327-1bbf59a3d155.eot?#iefix");
+    src: url("#{$typography-custom-font-url}/57bf7902-79ee-4b31-a327-1bbf59a3d155.eot?#iefix") format("eot"),
+         url("#{$typography-custom-font-url}/b290e775-e0f9-4980-914b-a4c32a5e3e36.woff2") format("woff2"),
+         url("#{$typography-custom-font-url}/4b978f72-bb48-46c3-909a-2a8cd2f8819c.woff") format("woff"),
+         url("#{$typography-custom-font-url}/9bdf0737-f98c-477a-9365-ffc41b9d1285.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: "Avenir";
+    src: url("#{$typography-custom-font-url}/1e9b2738-9316-4b0c-97c0-5423b69ea147.eot?#iefix");
+    src: url("#{$typography-custom-font-url}/1e9b2738-9316-4b0c-97c0-5423b69ea147.eot?#iefix") format("eot"),
+         url("#{$typography-custom-font-url}/1a7173fa-062b-49ad-9915-bc57d3bfc1f5.woff2") format("woff2"),
+         url("#{$typography-custom-font-url}/cdda031e-26e9-4269-83d1-5a218caa10db.woff") format("woff"),
+         url("#{$typography-custom-font-url}/6d1ce413-19e7-4b43-b328-6cdedc58b35a.ttf") format("truetype");
+    font-weight: 400;
+    font-style: oblique;
+}
+
+// 500 = AVENIR W01 65 MEDIUM
+@font-face
+{
+    font-family: "Avenir";
+    src: url("#{$typography-custom-font-url}/e0542193-b2e6-4273-bc45-39d4dfd3c15b.eot?#iefix");
+    src: url("#{$typography-custom-font-url}/e0542193-b2e6-4273-bc45-39d4dfd3c15b.eot?#iefix") format("eot"),
+         url("#{$typography-custom-font-url}/17b90ef5-b63f-457b-a981-503bb7afe3c0.woff2") format("woff2"),
+         url("#{$typography-custom-font-url}/c9aeeabd-dd65-491d-b4be-3e0db9ae47a0.woff") format("woff"),
+         url("#{$typography-custom-font-url}/25f994de-d13f-4a5d-a82b-bf925a1e054d.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: "Avenir";
+    src: url("#{$typography-custom-font-url}/cebcf56a-ea7e-4f5c-8110-a7ee367c1f91.eot?#iefix");
+    src: url("#{$typography-custom-font-url}/cebcf56a-ea7e-4f5c-8110-a7ee367c1f91.eot?#iefix") format("eot"),
+         url("#{$typography-custom-font-url}/deb5e718-7abb-4df3-9365-edfa95317090.woff2") format("woff2"),
+         url("#{$typography-custom-font-url}/04801919-17ee-4c6b-8b17-eb1965cb3ed6.woff") format("woff"),
+         url("#{$typography-custom-font-url}/cee053ec-4b41-4506-a1fe-796261690610.ttf") format("truetype");
+    font-weight: 500;
+    font-style: oblique;
+}
+
+// 700 = AVENIR W01 85 HEAVY
+@font-face
+{
+    font-family: "Avenir";
+    src: url("#{$typography-custom-font-url}/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix");
+    src: url("#{$typography-custom-font-url}/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix") format("eot"),
+         url("#{$typography-custom-font-url}/d513e15e-8f35-4129-ad05-481815e52625.woff2") format("woff2"),
+         url("#{$typography-custom-font-url}/61bd362e-7162-46bd-b67e-28f366c4afbe.woff") format("woff"),
+         url("#{$typography-custom-font-url}/ccd17c6b-e7ed-4b73-b0d2-76712a4ef46b.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: "Avenir";
+    src: url("#{$typography-custom-font-url}/e6b412d9-d1ed-4b17-bb93-a6911df8640d.eot?#iefix");
+    src: url("#{$typography-custom-font-url}/e6b412d9-d1ed-4b17-bb93-a6911df8640d.eot?#iefix") format("eot"),
+         url("#{$typography-custom-font-url}/3c210c80-960f-4684-850b-25390b4d08af.woff2") format("woff2"),
+         url("#{$typography-custom-font-url}/cb5c71ad-e582-4d00-929c-67fbfaeb1c27.woff") format("woff"),
+         url("#{$typography-custom-font-url}/9ced8e96-4602-4507-8c20-4ff381949a9a.ttf") format("truetype");
+    font-weight: 700;
+    font-style: oblique;
+}
+
+// 900 = AVENIR W01 95 BLACK
+@font-face
+{
+    font-family: "Avenir";
+    src: url("#{$typography-custom-font-url}/f55e4498-ad48-4577-93a0-c614de5cbbb8.eot?#iefix");
+    src: url("#{$typography-custom-font-url}/f55e4498-ad48-4577-93a0-c614de5cbbb8.eot?#iefix") format("eot"),
+         url("#{$typography-custom-font-url}/c78eb7af-a1c8-4892-974b-52379646fef4.woff2") format("woff2"),
+         url("#{$typography-custom-font-url}/75b36c58-2a02-4057-a537-09af0832ae46.woff") format("woff"),
+         url("#{$typography-custom-font-url}/b5c44a82-eeb8-41de-9c3f-a8db50b24b8a.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: "Avenir";
+    src: url("#{$typography-custom-font-url}/4030caeb-d266-4d36-ac58-a3bb7a5b1bfa.eot?#iefix");
+    src: url("#{$typography-custom-font-url}/4030caeb-d266-4d36-ac58-a3bb7a5b1bfa.eot?#iefix") format("eot"),
+         url("#{$typography-custom-font-url}/a2477e08-09d9-4d4b-97a9-23a1e22cb44c.woff2") format("woff2"),
+         url("#{$typography-custom-font-url}/19d12bba-92b1-43ad-9bab-cd36a4195c2a.woff") format("woff"),
+         url("#{$typography-custom-font-url}/5ba5a010-7470-4d9d-8a49-2920dc1be1f8.ttf") format("truetype");
+    font-weight: 900;
+    font-style: oblique;
+}
+
+// @font-face{
+//     // BASKERVILLE W01 REGULAR
+//     font-family: "Baskerville";
+//     src: url("#{$typography-custom-font-url}/8dc59876-75a4-4e80-bd1a-735d5f043beb.eot?#iefix");
+//     src: url("#{$typography-custom-font-url}/8dc59876-75a4-4e80-bd1a-735d5f043beb.eot?#iefix") format("eot"),
+//          url("#{$typography-custom-font-url}/9d829c2e-8420-477a-8b80-803b796e3253.woff2") format("woff2"),
+//          url("#{$typography-custom-font-url}/9df317a3-a79e-422e-b4e2-35ccd29cd5b7.woff") format("woff"),
+//          url("#{$typography-custom-font-url}/32d18512-4cc1-4c1c-a041-e595f26d1b96.ttf") format("truetype");
+//     font-weight: 400;
+//     font-style: normal;
+// }
+
+// MERRIWEATHER 400
+@font-face {
+    font-family: 'Amica Heading';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src:
+        local('Merriweather Regular '),
+        local('Merriweather-Regular'),
+        url('#{$typography-custom-font-url}/amica-heading-400.woff2') format('woff2'), /* Super Modern Browsers */
+        url('#{$typography-custom-font-url}/amica-heading-400.woff') format('woff'); /* Modern Browsers */
+}
+
+@font-face {
+    font-family: 'Amica Heading';
+    font-style: italic;
+    font-display: swap;
+    font-weight: 400;
+    src:
+        local('Merriweather Regular italic'),
+        local('Merriweather-Regularitalic'),
+        url('#{$typography-custom-font-url}/amica-heading-400italic.woff2') format('woff2'), /* Super Modern Browsers */
+        url('#{$typography-custom-font-url}/amica-heading-400italic.woff') format('woff'); /* Modern Browsers */
+}
+
+// MERRIWEATHER 700
+@font-face {
+    font-family: 'Amica Heading';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src:
+        local('Merriweather Bold '),
+        local('Merriweather-Bold'),
+        url('#{$typography-custom-font-url}/amica-heading-700.woff2') format('woff2'), /* Super Modern Browsers */
+        url('#{$typography-custom-font-url}/amica-heading-700.woff') format('woff'); /* Modern Browsers */
+}
+
+@font-face {
+    font-family: 'Amica Heading';
+    font-style: italic;
+    font-display: swap;
+    font-weight: 700;
+    src:
+        local('Merriweather Bold italic'),
+        local('Merriweather-Bolditalic'),
+        url('#{$typography-custom-font-url}/amica-heading-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+        url('#{$typography-custom-font-url}/amica-heading-700italic.woff') format('woff'); /* Modern Browsers */
+}
+
+// AMICA ICONS
+@font-face {
+    font-family: '#{$icomoon-font-family}';
+    src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?iydvek');
+    src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?iydvek#iefix') format('embedded-opentype'),
+      url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?iydvek') format('truetype'),
+      url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?iydvek') format('woff'),
+      url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?iydvek##{$icomoon-font-family}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}

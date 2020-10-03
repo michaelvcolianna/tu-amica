@@ -1,0 +1,633 @@
+// general.scss
+// Styles that span all (or most) pages
+// the intent is for this to be SUPER basic
+
+html
+{
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after
+{
+    box-sizing: inherit;
+}
+
+html,
+body
+{
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow: auto !important;
+
+    &.menu-open,
+    .menu-open &
+    {
+        height: 100% !important;
+        overflow: hidden !important;
+    }
+}
+
+body
+{
+    color: $font-color;
+    font-size: $font-size;
+    margin: 0;
+}
+
+figure
+{
+    margin: 0;
+}
+
+figcaption
+{
+    display: none;
+}
+
+img,
+svg
+{
+    display: block;
+    max-width: 100%;
+}
+
+sup
+{
+    font-size: 50%;
+    position: relative;
+    vertical-align: top;
+
+    @include bp($screen-sm)
+    {
+        top: -4px;
+    }
+}
+
+.nobr
+{
+    white-space: nowrap;
+}
+
+[data-icon]:before
+{
+    border-bottom: 3px solid transparent;
+    border-left: 5px solid $color-amica-teal;
+    border-top: 3px solid transparent;
+    bottom: 6px;
+    content: '';
+    margin-left: 3px;
+    position: absolute;
+    speak: none;
+}
+
+a[target="_blank"]:after
+{
+    content: ' (opens new window)';
+    display: inline-block;
+    left: -999em;
+    position: fixed;
+}
+
+.call-button
+{
+    background: $color-amica-orange;
+    border: 1px solid $color-amica-orange;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+    color: #fff;
+    display: block;
+    font-size: 22px;
+    height: 66px;
+    line-height: 66px;
+    margin: auto;
+    padding: 0 22px;
+    text-decoration: none;
+    width: 254px;
+
+    @include bp($screen-sm)
+    {
+        width: 302px;
+    }
+
+    @include bp($screen-lg)
+    {
+        transition: all $base-transition-duration $base-transition-easing;
+
+        &:hover
+        {
+            background: #fff;
+            border-color: $color-amica-orange;
+            color: $color-amica-orange;
+        }
+    }
+
+    .icon-phone
+    {
+        font-size: 25px;
+        margin-right: 22px;
+        position: relative;
+        top: 4px;
+
+        @include bp($screen-sm)
+        {
+            margin-right: 35px;
+        }
+    }
+}
+
+.dropdown
+{
+    margin: auto;
+    position: relative;
+    width: 254px;
+    z-index: 1;
+
+    @include bp($screen-sm)
+    {
+        width: 302px;
+    }
+
+    button
+    {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        background: $color-amica-orange;
+        border: 1px solid $color-amica-orange;
+        border-radius: 2px;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+        color: #fff;
+        cursor: pointer;
+        display: block;
+        font-family: $font-avenir;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 0 16px;
+        height: 66px;
+        text-align: center;
+        width: 100%;
+
+        @include bp($screen-lg)
+        {
+            transition: all $base-transition-duration $base-transition-easing;
+
+            &:hover
+            {
+                background: #fff;
+                border-color: $color-amica-orange;
+                color: $color-amica-orange;
+            }
+        }
+    }
+
+    .icon-caret
+    {
+        float: right;
+        margin-top: 3px;
+        transition: transform $base-transition-duration $base-transition-easing;
+    }
+
+    .dropdown-menu
+    {
+        background: #fff;
+        box-shadow: 0 1px 1px 0  rgba(0, 0, 0, 0.3);
+        margin: auto;
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+        transition: max-height $base-transition-duration $base-transition-easing;
+        width: 254px;
+
+        @include bp($screen-sm)
+        {
+            width: 302px;
+        }
+    }
+
+    ul
+    {
+        @include flexbox;
+        @include flex-flow( row wrap );
+        @include justify-content(space-around);
+        list-style: none;
+        margin: 0;
+        padding: 16px 0;
+    }
+
+    .dropdown-item
+    {
+        color: $color-amica-teal;
+        display: block;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+
+        @include bp($screen-sm)
+        {
+            font-size: 16px;
+        }
+
+        @include bp($screen-lg)
+        {
+            &:hover
+            {
+                span
+                {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        i:first-child
+        {
+            display: block;
+            font-size: 34px;
+
+            @include bp($screen-sm)
+            {
+                font-size: 46px;
+            }
+        }
+
+        span
+        {
+            &:after
+            {
+                bottom: 5px;
+                font-size: 5px;
+                margin-left: 3px;
+                position: absolute;
+
+                @include bp($screen-sm)
+                {
+                    font-size: 7px;
+                }
+            }
+        }
+    }
+
+    p
+    {
+        font-size: 14px !important;
+        padding-top: 5px;
+    }
+
+    &.dropdown-open
+    {
+        .dropdown-menu
+        {
+            max-height: 1000vh;
+        }
+
+        .icon-caret
+        {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.pull
+{
+    background: $color-amica-ghost;
+    margin: -109px auto 0 auto;
+    position: relative;
+    width: 309px;
+
+    @include bp($screen-sm)
+    {
+        width: 524px;
+    }
+
+    @include bp($screen-lg)
+    {
+        width: 980px;
+    }
+
+    h1,
+    h2,
+    p
+    {
+        text-align: center;
+    }
+}
+
+.accordion
+{
+    padding: 16px;
+
+    button
+    {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        background: transparent;
+        border: 0;
+        color: $color-amica-teal;
+        cursor: pointer;
+        display: block;
+        font-family: $font-avenir;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 0;
+        text-align: left;
+        width: 100%;
+
+        @include bp($screen-sm)
+        {
+            cursor: default;
+            font-size: 20px;
+            margin: auto;
+            width: 524px;
+            @include bold-fix;
+        }
+
+        @include bp($screen-lg)
+        {
+            outline: none;
+            width: 980px;
+        }
+
+        .icon-caret
+        {
+            float: right;
+            transition: transform $base-transition-duration $base-transition-easing;
+            transform: rotate(180deg);
+
+            @include bp($screen-sm)
+            {
+                display: none;
+            }
+        }
+    }
+
+    .accordion-inner
+    {
+        max-height: 1000vh;
+        overflow: hidden;
+        transition: max-height $base-transition-duration $base-transition-easing;
+
+        figure
+        {
+            margin: 16px auto;
+            width: 256px;
+
+            @include bp($screen-sm)
+            {
+                @include align-items( center );
+                @include flexbox;
+                @include flex-flow( row );
+                @include justify-content( space-between );
+                margin: 22px auto;
+                width: 524px;
+            }
+
+            @include bp($screen-lg)
+            {
+                margin: 0;
+            }
+
+            img
+            {
+                margin: auto;
+                width: 115px;
+
+                @include bp($screen-sm)
+                {
+                    width: 214px;
+                }
+            }
+        }
+
+        ul
+        {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li
+        {
+            line-height: 19px;
+            margin: 16px 0;
+            padding: 0 0 0 23px;
+            position: relative;
+
+            &:before
+            {
+                color: $color-amica-orange;
+                content: '\e90c';
+                font-family: $icomoon-font-family;
+                left: 0;
+                position: absolute;
+                top: 0;
+            }
+
+            sup
+            {
+                margin-left: 1px;
+                top: -4px;
+            }
+        }
+
+        h2
+        {
+            font-size: 14px;
+            margin: 0;
+
+            @include bp($screen-sm)
+            {
+                font-size: 18px;
+                margin: auto;
+                width: 524px;
+            }
+
+            br
+            {
+                @include bp(480px)
+                {
+                    display: none;
+                }
+            }
+
+            sup
+            {
+                @include bp($screen-sm)
+                {
+                    font-size: 55%;
+                    top: -2px;
+                }
+            }
+        }
+
+        p
+        {
+            font-size: 14px;
+            line-height: 19px;
+            margin: 0;
+            padding-top: 16px;
+
+            @include bp($screen-sm)
+            {
+                font-size: 16px;
+                line-height: 22px;
+                margin: auto;
+                width: 524px;
+            }
+
+            @include bp($screen-lg)
+            {
+                width: 980px;
+            }
+
+            sup
+            {
+                top: -3px;
+
+                @include bp($screen-sm)
+                {
+                    top: -4px;
+                }
+            }
+        }
+    }
+
+    &:nth-child(odd)
+    {
+        background: $color-amica-slate;
+
+        @include bp($screen-sm)
+        {
+            background: transparent;
+        }
+    }
+
+    &:not(:first-child)
+    {
+        border-top: 2px solid $color-amica-teal;
+
+        @include bp($screen-sm)
+        {
+            border-top: 0;
+        }
+    }
+
+    &.accordion-collapsed
+    {
+        button
+        {
+            .icon-caret
+            {
+                transform: rotate(0);
+            }
+        }
+
+        .accordion-inner
+        {
+            max-height: 0;
+
+            @include bp($screen-sm)
+            {
+                max-height: 1000vh;
+            }
+        }
+    }
+}
+
+#banner
+{
+    background-color: $color-amica-ghost;
+
+    @include bp($screen-lg)
+    {
+        padding: 10px 0;
+    }
+
+    .menu-open &
+    {
+        display: none;
+    }
+
+    #banner-message
+    {
+        display: none;
+
+        .banner-expanded &
+        {
+            display: block;
+        }
+    }
+
+    h3,
+    p
+    {
+        font-size: 16px;
+        font-weight: 400;
+        margin: auto;
+        max-width: $content-max-width;
+        text-align: center;
+    }
+
+    button
+    {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        background-color: transparent;
+        border: 0;
+        color: $color-amica-black;
+        font-family: $font-avenir;
+        font-size: 1em;
+        font-weight: 400;
+        margin: auto;
+        padding: 10px 45px 10px 15px;
+        position: relative;
+        width: 100%;
+    }
+
+    .banner-icon
+    {
+        height: 15px;
+        position: absolute;
+        right: 15px;
+        top: 0.9em;
+        width: 15px;
+
+        @include bp($screen-sm)
+        {
+            top: 0.75em;
+        }
+
+        &:before
+        {
+            content: $icon-caret;
+            font-family: $icomoon-font-family;
+        }
+
+        .banner-expanded &
+        {
+            transform: rotate(180deg);
+        }
+    }
+
+    p
+    {
+        padding: 15px;
+    }
+}
+
+// BEGIN design quirks
+.mantle
+{
+    #page-frontpage &,
+    #page-quote &
+    {
+        @include bp($screen-sm)
+        {
+            height: 0;
+        }
+    }
+}
+// END design quirks

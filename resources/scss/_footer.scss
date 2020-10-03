@@ -1,0 +1,146 @@
+// site footer
+footer
+{
+    color: $color-amica-dust;
+    font-size: 13px;
+    margin: auto;
+    max-width: 335px;
+    text-align: center;
+
+    @include bp($screen-sm)
+    {
+        max-width: none;
+        padding: 39px 0 73px 0;
+        text-align: left;
+        width: 524px;
+    }
+
+    @include bp($screen-lg)
+    {
+        width: 919px;
+    }
+
+    a
+    {
+        color: $color-amica-dust;
+    }
+
+    p
+    {
+        @include bp($screen-sm)
+        {
+            width: 361px;
+        }
+
+        @include bp($screen-lg)
+        {
+            line-height: 15px;
+            width: 680px;
+        }
+    }
+
+    .disclaimers
+    {
+        border-bottom: 1px solid $color-amica-ash;
+        padding-bottom: 10px;
+
+        @include bp($screen-sm)
+        {
+            margin-bottom: 25px;
+        }
+    }
+
+    .social
+    {
+        margin-top: 11px;
+
+        @include bp($screen-sm)
+        {
+            @include align-items( center );
+            @include flexbox;
+            @include flex-flow( row );
+            @include justify-content( flex-start );
+            margin-top: 0;
+        }
+
+        @include bp($screen-lg)
+        {
+            float: right;
+            margin-left: 25px;
+        }
+
+        em
+        {
+            color: $color-amica-orange;
+            display: none;
+            font-family: $font-avenir;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            text-transform: uppercase;
+            @include bold-fix;
+        }
+
+        ul
+        {
+            @include flexbox;
+            @include flex-flow( row wrap );
+            @include justify-content( center );
+            list-style: none;
+            margin: 0;
+            padding: 15px 0 10px 0;
+
+            @include bp($screen-sm)
+            {
+                padding: 0 0 10px 0;
+            }
+        }
+
+        a
+        {
+            color: $color-amica-black;
+            display: block;
+            font-size: 22px;
+            height: 23px;
+            margin-right: 10px;
+            text-decoration: none;
+            width: 23px;
+
+            @include bp($screen-sm)
+            {
+                font-size: 34px;
+                height: 34px;
+                margin-right: 14px;
+                width: 34px;
+            }
+
+            &.link-youtube
+            {
+                font-size: 31px;
+                width: 33px;
+
+                @include bp($screen-sm)
+                {
+                    font-size: 47px;
+                    width: 47px;
+                }
+
+                i
+                {
+                    position: relative;
+                    top: -4px;
+
+                    @include bp($screen-sm)
+                    {
+                        top: -6px;
+                    }
+                }
+            }
+
+            em
+            {
+                display: none;
+            }
+        }
+    }
+}

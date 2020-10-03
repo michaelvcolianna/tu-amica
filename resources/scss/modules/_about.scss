@@ -1,0 +1,324 @@
+#about-pull
+{
+    padding: 16px 0;
+
+    @include bp($screen-sm)
+    {
+        margin: 0;
+        padding: 52px 0;
+        width: 100%;
+    }
+
+    .pull-inner
+    {
+        @include bp($screen-sm)
+        {
+            margin: auto;
+            width: 524px;
+        }
+
+        @include bp($screen-lg)
+        {
+            @include flexbox;
+            @include flex-flow( row wrap );
+            @include justify-content( center );
+            width: 824px;
+        }
+    }
+
+    h2,
+    p
+    {
+        font-size: 16px;
+        margin: auto;
+        width: 242px;
+
+        @include bp($screen-sm)
+        {
+            width: 100%;
+        }
+    }
+
+    h2
+    {
+        font-weight: 700;
+        @include bold-fix;
+
+        @include bp($screen-sm)
+        {
+            font-size: 24px;
+        }
+    }
+
+    p
+    {
+        line-height: 22px;
+        padding-bottom: 16px;
+
+        @include bp($screen-sm)
+        {
+            padding-bottom: 26px;
+        }
+
+        @include bp($screen-lg)
+        {
+            padding-bottom: 44px;
+        }
+    }
+
+    .call-button,
+    .dropdown
+    {
+        @include bp($screen-lg)
+        {
+            width: 302px;
+        }
+    }
+
+    .call-button
+    {
+        margin-bottom: 8px;
+
+        @include bp($screen-sm)
+        {
+            margin-bottom: 20px;
+        }
+
+        @include bp($screen-lg)
+        {
+            margin: 0 20px 0 0;
+        }
+    }
+
+    .dropdown
+    {
+        @include bp($screen-lg)
+        {
+            margin: 0 0 0 20px;
+        }
+    }
+}
+
+#about-copy
+{
+    margin: auto;
+    max-width: 345px;
+    padding: 8px 0 16px 0;
+
+    @include bp($screen-sm)
+    {
+        max-width: none;
+        width: 524px;
+    }
+
+    @include bp($screen-lg)
+    {
+        width: 980px;
+    }
+
+    h1,
+    p
+    {
+        margin: 0;
+    }
+
+    h1
+    {
+        color: $color-amica-teal;
+        font-size: 24px;
+        font-weight: 700;
+        @include bold-fix;
+
+        @include bp($screen-sm)
+        {
+            padding-top: 35px;
+        }
+    }
+
+    h2
+    {
+        font-family: $font-merriweather;
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 25px;
+        margin: auto;
+        padding-top: 16px;
+
+        @include bp($screen-sm)
+        {
+            margin: 0;
+            padding-top: 22px;
+            width: 459px;
+        }
+    }
+
+    p
+    {
+        font-size: 16px;
+        line-height: 22px;
+        padding-top: 16px;
+
+        @include bp($screen-sm)
+        {
+            padding-top: 22px;
+        }
+    }
+}
+
+#about-content
+{
+    margin: auto;
+    max-width: 345px;
+    padding: 8px 0 16px 0;
+
+    @include bp($screen-sm)
+    {
+        max-width: none;
+        width: 524px;
+    }
+
+    @include bp($screen-lg)
+    {
+        width: 980px;
+    }
+
+    h3
+    {
+        color: $color-amica-teal;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 40px;
+
+        @include bp($screen-sm)
+        {
+            font-size: 20px;
+        }
+    }
+
+    p
+    {
+        @include bp($screen-sm)
+        {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+}
+
+#about-personal-service
+{
+    margin-top: -20px;
+}
+
+#about-awards-recognition
+{
+    @include bp($screen-lg)
+    {
+        @include align-items( center );
+        @include flexbox;
+        @include flex-flow( row wrap );
+        @include justify-content( center );
+        margin: 22px auto 0 auto;
+        width: 980px;
+    }
+
+    #about-awards-image
+    {
+        @include bp($screen-lg)
+        {
+            width: 30%;
+        }
+
+        figure
+        {
+            margin: 16px auto;
+            width: 256px;
+
+            @include bp($screen-sm)
+            {
+                margin: 22px auto;
+                width: 524px;
+            }
+
+            @include bp($screen-lg)
+            {
+                margin: 0;
+                width: auto;
+            }
+        }
+
+        img
+        {
+            margin: auto;
+            width: 115px;
+
+            @include bp($screen-sm)
+            {
+                width: 214px;
+            }
+
+            @include bp($screen-lg)
+            {
+                margin: 0;
+            }
+        }
+    }
+
+    #about-awards-text
+    {
+        @include bp($screen-lg)
+        {
+            width: 70%;
+        }
+
+        h2
+        {
+            font-size: 14px;
+            margin: 0;
+
+            @include bp($screen-sm)
+            {
+                font-size: 18px;
+            }
+        }
+
+        br
+        {
+            @include bp($screen-sm)
+            {
+                display: none;
+            }
+        }
+    }
+
+    figure,
+    h2,
+    p
+    {
+        @include bp($screen-lg)
+        {
+            width: auto;
+        }
+    }
+
+    h3
+    {
+        @include bp($screen-lg)
+        {
+            margin-top: 15px;
+            width: 100%;
+        }
+    }
+
+    figure
+    {
+        img
+        {
+            @include bp($screen-lg)
+            {
+                margin: 0;
+            }
+        }
+    }
+}
